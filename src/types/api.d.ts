@@ -200,7 +200,7 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
-        CPRDriversDTO: {
+        ClassificationDTO: {
             /** Format: int32 */
             position?: number;
             /** Format: int32 */
@@ -208,24 +208,9 @@ export interface components {
             name?: string;
             /** Format: int32 */
             total?: number;
-            stagePoints?: components["schemas"]["CPRStagePointsDTO"][];
+            stagePoints?: components["schemas"]["StagePointsDTO"][];
         };
-        CPRStagePointsDTO: {
-            stage?: string;
-            geral?: string;
-        };
-        CPRAbsDriversDTO: {
-            /** Format: int32 */
-            position?: number;
-            /** Format: int32 */
-            number?: number;
-            name?: string;
-            /** Format: int32 */
-            total?: number;
-            stagePoints?: components["schemas"]["CPRAbsStagePointsDTO"][];
-        };
-        CPRAbsStagePointsDTO: {
-            stage?: string;
+        StagePointsDTO: {
             powerStage?: string;
             geral?: string;
         };
@@ -253,7 +238,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -273,7 +258,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -293,7 +278,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRAbsDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -313,7 +298,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRAbsDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -333,7 +318,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRAbsDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -353,7 +338,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRAbsDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -373,7 +358,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -393,7 +378,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -413,7 +398,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -433,7 +418,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -453,7 +438,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRAbsDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
@@ -473,7 +458,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "*/*": components["schemas"]["CPRAbsDriversDTO"][];
+                    "*/*": components["schemas"]["ClassificationDTO"][];
                 };
             };
         };
